@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 29 sep. 2020 à 12:05
+-- Généré le : lun. 04 jan. 2021 à 19:16
 -- Version du serveur :  10.4.11-MariaDB
 -- Version de PHP : 7.4.6
 
@@ -54,14 +54,6 @@ CREATE TABLE `notation_ville` (
   `code_postal` int(5) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Déchargement des données de la table `notation_ville`
---
-
-INSERT INTO `notation_ville` (`id_notation`, `ville`, `dechets`, `pesticides`, `fleurs`, `code_postal`) VALUES
-(8, 'draguignan', 1, 1, 1, 83600),
-(10, 'ginoles', 5, 5, 5, 11000);
-
 -- --------------------------------------------------------
 
 --
@@ -73,13 +65,6 @@ CREATE TABLE `recup_password` (
   `email` varchar(255) NOT NULL,
   `token` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Déchargement des données de la table `recup_password`
---
-
-INSERT INTO `recup_password` (`id`, `email`, `token`) VALUES
-(1, 'damienbroggini@hotmail.fr', 'VlWjPhlniERCfU5edPYD');
 
 -- --------------------------------------------------------
 
@@ -101,7 +86,7 @@ CREATE TABLE `table_membres` (
 --
 
 INSERT INTO `table_membres` (`id`, `identifiant`, `email`, `password`, `token`, `validation`) VALUES
-(38, 'dam', 'damienbroggini@hotmail.fr', '$2y$10$Uv5LMmu9Zr55XQqT5TmSBeu5UjVgGM0igvOG5eHVhQFBQt/WeVDAG', 'valide', 1);
+(53, 'damien', 'damienbroggini@hotmail.fr', '$2y$10$63Dpe63K6BIbUzfSZuPgoel3c1v7FyR8vtFkf1cvP9jEvYOGhWNyC', 'valide', 1);
 
 --
 -- Index pour les tables déchargées
@@ -145,7 +130,7 @@ ALTER TABLE `espace_membres_terroir`
 -- AUTO_INCREMENT pour la table `notation_ville`
 --
 ALTER TABLE `notation_ville`
-  MODIFY `id_notation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_notation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT pour la table `recup_password`
@@ -157,7 +142,7 @@ ALTER TABLE `recup_password`
 -- AUTO_INCREMENT pour la table `table_membres`
 --
 ALTER TABLE `table_membres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
